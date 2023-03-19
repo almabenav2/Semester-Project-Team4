@@ -1,0 +1,20 @@
+{
+  "name": "semester-project",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almabenav2/Semester-Project-Team4.git"
+  },
+  "author": "Alma,Francisco,Antonio,Stephen",
+  "bugs": {
+    "url": "https://github.com/almabenav2/Semester-Project-Team4/issues"
+  },
+  "homepage": "https://github.com/almabenav2/Semester-Project-Team4#readme",
+  "dependencies": {
+    "parcel": "^2.8.3"
+  }
+}
