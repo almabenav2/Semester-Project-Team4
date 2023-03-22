@@ -646,6 +646,7 @@ async function getImages(int, type, orientation) {
     } else console.log("Something went wrong...");
 }
 const displayNav = (data)=>{
+    const logoPath = ""; // create an image directory to store the logo image and insert the path here.
     const navImages = `<img name=slider class="navimages">`;
     const slideImages = [];
     slideImages[0] = data.results[3].urls.regular;
@@ -653,7 +654,7 @@ const displayNav = (data)=>{
     slideImages[2] = data.results[11].urls.regular;
     slideImages[3] = data.results[15].urls.regular;
     slideImages[4] = data.results[17].urls.regular;
-    const socialMedia = `<section class="logo"><img class="nav-img" src="https://cdn-icons-png.flaticon.com/128/739/739249.png" alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/2168/2168336.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt"facebooklogo"></a></section>`;
+    const socialMedia = `<section class="logo"><img class="nav-img" src="${logoPath}" alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/2168/2168336.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt"facebooklogo"></a></section>`;
     let indexOfImages = 0;
     function changeImages() {
         document.slider.src = slideImages[indexOfImages];
