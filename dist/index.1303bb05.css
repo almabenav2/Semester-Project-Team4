@@ -1,0 +1,38 @@
+body {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.face {
+  height: 40px;
+}
+
+.heading {
+  background-color: gold;
+  justify-content: space-between;
+  margin: 0 2rem;
+  padding: 1rem 1rem 0;
+  display: flex;
+}
+
+.logo img {
+  height: 100px;
+  padding: 1rem;
+}
+
+.media img {
+  height: 40px;
+  padding: 1rem;
+}
+
+.navigation {
+  margin: 0 2rem 2rem;
+  padding-top: 0;
+}
+
+.navigation img {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=index.1303bb05.css.map */

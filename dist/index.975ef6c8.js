@@ -560,20 +560,25 @@ function hmrAccept(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
+var _data = require("./data");
 document.getElementById("root").appendChild((0, _appDefault.default)());
+(0, _data.getImages)(1, "car", "landscape");
 
-},{"./App":"2kQhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
+},{"./App":"2kQhy","./data":"9kapS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _utils = require("./utils");
 function App() {
-    const header = (0, _utils.createElement)("h1", {
-        textContent: "HELLO WORLD",
+    const header = (0, _utils.createElement)("header", {
         className: "heading"
+    });
+    const navBar = (0, _utils.createElement)("nav", {
+        className: "navigation"
     });
     const main = (0, _utils.createElement)("main");
     return (0, _utils.createElement)("div", {}, [
         header,
+        navBar,
         main
     ]);
 }
@@ -625,6 +630,41 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["jC2qd","8lqZg"], "8lqZg", "parcelRequiredc04")
+},{}],"9kapS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getImages", ()=>getImages);
+parcelHelpers.export(exports, "displayNav", ()=>displayNav);
+const accessKey = "7F-ZRGL0PGzM-wC2Y1WBSuQKiss_448K7HPUtK5h-P0";
+async function getImages(int, type, orientation) {
+    const response = await fetch(`https://api.unsplash.com/search/photos?query=${type}&orientation=${orientation}&per_page=${int}10&client_id=${accessKey}`);
+    console.log(response);
+    if (response.status === 200) {
+        const data = await response.json();
+        console.log(data);
+        displayNav(data);
+    } else console.log("Something went wrong...");
+}
+const displayNav = (data)=>{
+    const navImages = `<img name=slider class="navimages">`;
+    const slideImages = [];
+    slideImages[0] = data.results[3].urls.regular;
+    slideImages[1] = data.results[23].urls.regular;
+    slideImages[2] = data.results[11].urls.regular;
+    slideImages[3] = data.results[15].urls.regular;
+    slideImages[4] = data.results[17].urls.regular;
+    const socialMedia = `<section class="logo"><img class="nav-img" src="https://cdn-icons-png.flaticon.com/128/739/739249.png" alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/2168/2168336.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt"facebooklogo"></a></section>`;
+    let indexOfImages = 0;
+    function changeImages() {
+        document.slider.src = slideImages[indexOfImages];
+        if (indexOfImages < 4) indexOfImages++;
+        else indexOfImages = 0;
+    }
+    setInterval(changeImages, 3000);
+    document.querySelector(".navigation").innerHTML = navImages;
+    document.querySelector(".heading").innerHTML = socialMedia;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["jC2qd","8lqZg"], "8lqZg", "parcelRequiredc04")
 
 //# sourceMappingURL=index.975ef6c8.js.map
