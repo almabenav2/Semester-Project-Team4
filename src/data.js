@@ -45,7 +45,7 @@ export async function getImages(int,type,orientation){
                 indexOfImages = 0;
             }
         }
-        setInterval(changeImages, 3000);
+        setInterval(changeImages, 2500);
         document.querySelector(".navigation").innerHTML = navImages;
         document.querySelector(".heading").innerHTML = socialMedia;
 
