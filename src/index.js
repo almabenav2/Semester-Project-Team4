@@ -1,5 +1,5 @@
 import App from "./App"; 
-import { getImages, displayNav } from "./data";
+import { getImages } from "./data";
 
 
 document.getElementById("root").appendChild(App());
