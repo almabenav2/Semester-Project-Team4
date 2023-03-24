@@ -558,49 +558,13 @@ function hmrAccept(bundle, id) {
 
 },{}],"8lqZg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _app = require("./App");
-var _appDefault = parcelHelpers.interopDefault(_app);
-var _data = require("./data");
-document.getElementById("root").appendChild((0, _appDefault.default)());
-(0, _data.getImages)(1, "car", "landscape");
+var _appJs = require("./App.js");
+var _appJsDefault = parcelHelpers.interopDefault(_appJs);
+var _dataJs = require("./data.js");
+document.getElementById("root").appendChild((0, _appJsDefault.default)());
+(0, _dataJs.getImages)(1, "car", "landscape");
 
-},{"./App":"2kQhy","./data":"9kapS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _utils = require("./utils");
-function App() {
-    const header = (0, _utils.createElement)("header", {
-        className: "heading"
-    });
-    const navBar = (0, _utils.createElement)("nav", {
-        className: "navigation"
-    });
-    const main = (0, _utils.createElement)("main");
-    return (0, _utils.createElement)("div", {}, [
-        header,
-        navBar,
-        main
-    ]);
-}
-exports.default = App;
-
-},{"./utils":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"en4he":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "createElement", ()=>createElement);
-function createElement(type, props = {}, children = []) {
-    const element = document.createElement(type);
-    Object.entries(props).forEach(([key, value])=>{
-        if (~key.indexOf("-")) element.setAttribute(key, value);
-        else element[key] = value;
-    });
-    children.forEach((child)=>{
-        element.appendChild(child);
-    });
-    return element;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./App.js":"2kQhy","./data.js":"9kapS"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -630,7 +594,45 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"9kapS":[function(require,module,exports) {
+},{}],"2kQhy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _utilsJs = require("./utils.js");
+function App() {
+    const header = (0, _utilsJs.createElement)("header", {
+        className: "heading"
+    });
+    const navBar = (0, _utilsJs.createElement)("nav", {
+        className: "navigation"
+    });
+    const main = (0, _utilsJs.createElement)("main");
+    return (0, _utilsJs.createElement)("div", {}, [
+        header,
+        navBar,
+        main
+    ]);
+}
+exports.default = App;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils.js":"en4he"}],"en4he":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createElement", ()=>createElement);
+parcelHelpers.export(exports, "displayMain", ()=>displayMain);
+function createElement(type, props = {}, children = []) {
+    const element = document.createElement(type);
+    Object.entries(props).forEach(([key, value])=>{
+        if (~key.indexOf("-")) element.setAttribute(key, value);
+        else element[key] = value;
+    });
+    children.forEach((child)=>{
+        element.appendChild(child);
+    });
+    return element;
+}
+function displayMain() {}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9kapS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getImages", ()=>getImages);
@@ -661,7 +663,7 @@ const displayNav = (data)=>{
         if (indexOfImages < 4) indexOfImages++;
         else indexOfImages = 0;
     }
-    setInterval(changeImages, 3000);
+    setInterval(changeImages, 2500);
     document.querySelector(".navigation").innerHTML = navImages;
     document.querySelector(".heading").innerHTML = socialMedia;
 };

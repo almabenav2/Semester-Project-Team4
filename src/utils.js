@@ -15,3 +15,7 @@ export function createElement(type, props = {}, children = []){
 
     return element;
 }
+
+export function displayMain(){
+    
+}
