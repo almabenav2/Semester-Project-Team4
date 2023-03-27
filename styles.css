@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Josefin+Sans&family=Kaushan+Script&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Yanone+Kaffeesatz&display=swap'); */
+
 :root {
+
+/* fonts */
+--font-body: 'Josefin Sans', sans-serif;
+--font-headline: 'Bebas Neue', cursive;
 /* colors */
 --primary-color: #023047;
 --secondary-color: #E78200;
@@ -11,6 +17,7 @@
 body{
     max-width: 960px;
     margin: 0 auto;
+    font-family: var(--font-body);
 }
 
 #cuadrado {
@@ -79,12 +86,12 @@ body{
     text-align: center;
     background-color: var(--tertiary-color);
     padding: 2rem;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--font-body);
 }
 
 .grid input[type=date]{
     padding: .5rem;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--font-body);
     font-size: 1.3rem;
 }
 .grid label{
@@ -108,20 +115,20 @@ body{
     text-align: center;
 }
 .submission input{
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--font-body);
     font-size: 1.2rem;
 }
 
 form {
     border: 3px solid #f1f1f1;
-    font-family: Arial;
+    font-family: var(--font-body);
     margin: 2rem;
   }
   
   .container {
     padding: 20px;
     background-color: var(--tertiary-color);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--font-body);
     font-size: 17px;
   }
   
@@ -132,8 +139,10 @@ form {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--font-body);
+    cursor: pointer;
     box-shadow: 2px 5px 5px #888888;
+
   }
   
   input[type=checkbox] {
@@ -156,9 +165,9 @@ form {
     margin: 2rem;
     margin-bottom: 6rem;
     padding: 1rem;
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--font-headline);
     font-size: 1.8rem;
-    background-image: url('https://images.unsplash.com/photo-1494783367193-149034c05e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-image: url('https://images.unsplash.com/photo-1563242152-568e5de6f2b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
