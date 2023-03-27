@@ -1,3 +1,4 @@
+
 export function createElement(type, props = {}, children = []){
     const element= document.createElement(type);
 
@@ -16,6 +17,8 @@ export function createElement(type, props = {}, children = []){
     return element;
 }
 
-export function displayMain(){
-    
+export function DisplayAnimation() {
+
+    const animation = createElement('img',{src:'https://media.tenor.com/LEY96aL4a4MAAAAC/cars.gif',alt:'animation'});
+    return document.querySelector(".animation").appendChild(animation);
 }
