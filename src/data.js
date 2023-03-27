@@ -16,7 +16,7 @@ export async function getImages(int,type,orientation){
 
     export const displayNav = (data)=>{
 
-        let logoPath = "https://ik.imagekit.io/tfotr241290/Black_n_White_Luxury__Rent_Car_Logo.png?updatedAt=1679597309897"; 
+        let logoPath = "https://ik.imagekit.io/tfotr241290/logo_white.png?updatedAt=1679940372001"; 
 
         const navImages = `<img name=slider class="navimages">`
 
@@ -33,7 +33,7 @@ export async function getImages(int,type,orientation){
         slideImages[4]= data.results[17].urls.regular;
 
 
-        const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1051/1051309.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/25/25347.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt"facebooklogo"></a></section>`
+        const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/3670/3670124.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/3670/3670211.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/3670/3670125.png" alt"facebooklogo"></a></section>`
         
         let indexOfImages = 0;
         function changeImages(){

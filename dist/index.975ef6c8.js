@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"jC2qd":[function(require,module,exports) {
+})({"hnNSs":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -667,7 +667,7 @@ async function getImages(int, type, orientation) {
     } else console.log("Something went wrong...");
 }
 const displayNav = (data)=>{
-    let logoPath = "https://ik.imagekit.io/tfotr241290/Black_n_White_Luxury__Rent_Car_Logo.png?updatedAt=1679597309897";
+    let logoPath = "https://ik.imagekit.io/tfotr241290/logo_white.png?updatedAt=1679940372001";
     const navImages = `<img name=slider class="navimages">`;
     const slideImages = [];
     slideImages[0] = data.results[3].urls.regular;
@@ -675,7 +675,7 @@ const displayNav = (data)=>{
     slideImages[2] = data.results[11].urls.regular;
     slideImages[3] = data.results[15].urls.regular;
     slideImages[4] = data.results[17].urls.regular;
-    const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1051/1051309.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/25/25347.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt"facebooklogo"></a></section>`;
+    const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/3670/3670124.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/3670/3670211.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/3670/3670125.png" alt"facebooklogo"></a></section>`;
     let indexOfImages = 0;
     function changeImages() {
         document.slider.src = slideImages[indexOfImages];
@@ -687,6 +687,6 @@ const displayNav = (data)=>{
     document.querySelector(".heading").innerHTML = socialMedia;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["jC2qd","8lqZg"], "8lqZg", "parcelRequiredc04")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hnNSs","8lqZg"], "8lqZg", "parcelRequiredc04")
 
 //# sourceMappingURL=index.975ef6c8.js.map
