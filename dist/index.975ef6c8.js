@@ -561,16 +561,16 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _appJs = require("./App.js");
 var _appJsDefault = parcelHelpers.interopDefault(_appJs);
 var _dataJs = require("./data.js");
-var _utilsJs = require("./utils.js");
 document.getElementById("root").appendChild((0, _appJsDefault.default)());
 document.querySelector(".slogan").appendChild((0, _appJs.App2)());
 (0, _dataJs.getImages)(1, "car", "landscape");
-(0, _utilsJs.DisplayAnimation)();
+document.querySelector(".subscribed").appendChild((0, _appJs.App3)());
 
-},{"./App.js":"2kQhy","./data.js":"9kapS","./utils.js":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
+},{"./App.js":"2kQhy","./data.js":"9kapS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App2", ()=>App2);
+parcelHelpers.export(exports, "App3", ()=>App3);
 var _utilsJs = require("./utils.js");
 function App() {
     const header = (0, _utilsJs.createElement)("header", {
@@ -593,13 +593,22 @@ function App2() {
         slogan
     ]);
 }
+function App3() {
+    const name = document.querySelector("#name").value;
+    const feedback = (0, _utilsJs.createElement)("h2", {
+        className: "feedback",
+        textContent: `Thank you ${name} for subscribing to our newsletter, you will be emailed with our newest offers and promotions as soon as they come out.`
+    });
+    return (0, _utilsJs.createElement)("div", {}, [
+        feedback
+    ]);
+}
 exports.default = App;
 
 },{"./utils.js":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"en4he":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "createElement", ()=>createElement);
-parcelHelpers.export(exports, "DisplayAnimation", ()=>DisplayAnimation);
 function createElement(type, props = {}, children = []) {
     const element = document.createElement(type);
     Object.entries(props).forEach(([key, value])=>{
@@ -610,13 +619,6 @@ function createElement(type, props = {}, children = []) {
         element.appendChild(child);
     });
     return element;
-}
-function DisplayAnimation() {
-    const animation = createElement("img", {
-        src: "https://media.tenor.com/LEY96aL4a4MAAAAC/cars.gif",
-        alt: "animation"
-    });
-    return document.querySelector(".animation").appendChild(animation);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
