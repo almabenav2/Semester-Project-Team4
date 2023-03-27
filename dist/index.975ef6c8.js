@@ -561,10 +561,65 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _appJs = require("./App.js");
 var _appJsDefault = parcelHelpers.interopDefault(_appJs);
 var _dataJs = require("./data.js");
+var _utilsJs = require("./utils.js");
 document.getElementById("root").appendChild((0, _appJsDefault.default)());
+document.querySelector(".slogan").appendChild((0, _appJs.App2)());
 (0, _dataJs.getImages)(1, "car", "landscape");
+(0, _utilsJs.DisplayAnimation)();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./App.js":"2kQhy","./data.js":"9kapS"}],"gkKU3":[function(require,module,exports) {
+},{"./App.js":"2kQhy","./data.js":"9kapS","./utils.js":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "App2", ()=>App2);
+var _utilsJs = require("./utils.js");
+function App() {
+    const header = (0, _utilsJs.createElement)("header", {
+        className: "heading"
+    });
+    const navBar = (0, _utilsJs.createElement)("nav", {
+        className: "navigation"
+    });
+    return (0, _utilsJs.createElement)("div", {}, [
+        header,
+        navBar
+    ]);
+}
+function App2() {
+    const slogan = (0, _utilsJs.createElement)("h1", {
+        className: "slog",
+        textContent: "With us you hire the best car at the best price"
+    });
+    return (0, _utilsJs.createElement)("div", {}, [
+        slogan
+    ]);
+}
+exports.default = App;
+
+},{"./utils.js":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"en4he":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createElement", ()=>createElement);
+parcelHelpers.export(exports, "DisplayAnimation", ()=>DisplayAnimation);
+function createElement(type, props = {}, children = []) {
+    const element = document.createElement(type);
+    Object.entries(props).forEach(([key, value])=>{
+        if (~key.indexOf("-")) element.setAttribute(key, value);
+        else element[key] = value;
+    });
+    children.forEach((child)=>{
+        element.appendChild(child);
+    });
+    return element;
+}
+function DisplayAnimation() {
+    const animation = createElement("img", {
+        src: "https://media.tenor.com/LEY96aL4a4MAAAAC/cars.gif",
+        alt: "animation"
+    });
+    return document.querySelector(".animation").appendChild(animation);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -594,45 +649,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"2kQhy":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _utilsJs = require("./utils.js");
-function App() {
-    const header = (0, _utilsJs.createElement)("header", {
-        className: "heading"
-    });
-    const navBar = (0, _utilsJs.createElement)("nav", {
-        className: "navigation"
-    });
-    const main = (0, _utilsJs.createElement)("main");
-    return (0, _utilsJs.createElement)("div", {}, [
-        header,
-        navBar,
-        main
-    ]);
-}
-exports.default = App;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils.js":"en4he"}],"en4he":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "createElement", ()=>createElement);
-parcelHelpers.export(exports, "displayMain", ()=>displayMain);
-function createElement(type, props = {}, children = []) {
-    const element = document.createElement(type);
-    Object.entries(props).forEach(([key, value])=>{
-        if (~key.indexOf("-")) element.setAttribute(key, value);
-        else element[key] = value;
-    });
-    children.forEach((child)=>{
-        element.appendChild(child);
-    });
-    return element;
-}
-function displayMain() {}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9kapS":[function(require,module,exports) {
+},{}],"9kapS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getImages", ()=>getImages);
@@ -652,18 +669,18 @@ const displayNav = (data)=>{
     const navImages = `<img name=slider class="navimages">`;
     const slideImages = [];
     slideImages[0] = data.results[3].urls.regular;
-    slideImages[1] = data.results[23].urls.regular;
+    slideImages[1] = data.results[5].urls.regular;
     slideImages[2] = data.results[11].urls.regular;
     slideImages[3] = data.results[15].urls.regular;
     slideImages[4] = data.results[17].urls.regular;
-    const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/2168/2168336.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt"facebooklogo"></a></section>`;
+    const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1051/1051309.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/25/25347.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt"facebooklogo"></a></section>`;
     let indexOfImages = 0;
     function changeImages() {
         document.slider.src = slideImages[indexOfImages];
         if (indexOfImages < 4) indexOfImages++;
         else indexOfImages = 0;
     }
-    setInterval(changeImages, 2500);
+    setInterval(changeImages, 3000);
     document.querySelector(".navigation").innerHTML = navImages;
     document.querySelector(".heading").innerHTML = socialMedia;
 };

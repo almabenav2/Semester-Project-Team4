@@ -24,7 +24,7 @@ export async function getImages(int,type,orientation){
 
         slideImages[0]= data.results[3].urls.regular;
 
-        slideImages[1]= data.results[23].urls.regular;
+        slideImages[1]= data.results[5].urls.regular;
 
         slideImages[2]= data.results[11].urls.regular;
 
@@ -33,7 +33,7 @@ export async function getImages(int,type,orientation){
         slideImages[4]= data.results[17].urls.regular;
 
 
-        const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/2168/2168336.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt"facebooklogo"></a></section>`
+        const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1051/1051309.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/25/25347.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt"facebooklogo"></a></section>`
         
         let indexOfImages = 0;
         function changeImages(){
@@ -45,7 +45,8 @@ export async function getImages(int,type,orientation){
                 indexOfImages = 0;
             }
         }
-        setInterval(changeImages, 2500);
+        
+        setInterval(changeImages, 3000);
         document.querySelector(".navigation").innerHTML = navImages;
         document.querySelector(".heading").innerHTML = socialMedia;
 

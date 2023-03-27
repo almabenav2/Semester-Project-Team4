@@ -4,9 +4,13 @@ function App(){
     
     const header = createElement('header',{className:"heading",});
     const navBar = createElement('nav', {className: "navigation"});
-    const main = createElement('main');
-    return createElement('div', {}, [header,navBar,main]);
+    return createElement('div', {}, [header,navBar]);
 
+}
+
+export function App2(){
+    const slogan = createElement('h1',{className:'slog',textContent:'With us you hire the best car at the best price'})
+    return createElement('div',{},[slogan]);
 }
 
 
