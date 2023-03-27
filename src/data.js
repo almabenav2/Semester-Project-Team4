@@ -16,7 +16,7 @@ export async function getImages(int,type,orientation){
 
     export const displayNav = (data)=>{
 
-        let logoPath = "https://ik.imagekit.io/tfotr241290/logo_white.png?updatedAt=1679940372001"; 
+        let logoPath = "https://ik.imagekit.io/tfotr241290/Black_n_White_Luxury__Rent_Car_Logo.png?updatedAt=1679597309897";
 
         const navImages = `<img name=slider class="navimages">`
 
