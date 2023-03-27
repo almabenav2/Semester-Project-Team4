@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"jC2qd":[function(require,module,exports) {
+})({"hnNSs":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -561,16 +561,16 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _appJs = require("./App.js");
 var _appJsDefault = parcelHelpers.interopDefault(_appJs);
 var _dataJs = require("./data.js");
-var _utilsJs = require("./utils.js");
 document.getElementById("root").appendChild((0, _appJsDefault.default)());
 document.querySelector(".slogan").appendChild((0, _appJs.App2)());
 (0, _dataJs.getImages)(1, "car", "landscape");
-(0, _utilsJs.DisplayAnimation)();
+document.querySelector(".subscribed").appendChild((0, _appJs.App3)());
 
-},{"./App.js":"2kQhy","./data.js":"9kapS","./utils.js":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
+},{"./App.js":"2kQhy","./data.js":"9kapS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App2", ()=>App2);
+parcelHelpers.export(exports, "App3", ()=>App3);
 var _utilsJs = require("./utils.js");
 function App() {
     const header = (0, _utilsJs.createElement)("header", {
@@ -593,13 +593,22 @@ function App2() {
         slogan
     ]);
 }
+function App3() {
+    const name = document.querySelector("#name").value;
+    const feedback = (0, _utilsJs.createElement)("h2", {
+        className: "feedback",
+        textContent: `Thank you ${name} for subscribing to our newsletter, you will be emailed with our newest offers and promotions as soon as they come out.`
+    });
+    return (0, _utilsJs.createElement)("div", {}, [
+        feedback
+    ]);
+}
 exports.default = App;
 
 },{"./utils.js":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"en4he":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "createElement", ()=>createElement);
-parcelHelpers.export(exports, "DisplayAnimation", ()=>DisplayAnimation);
 function createElement(type, props = {}, children = []) {
     const element = document.createElement(type);
     Object.entries(props).forEach(([key, value])=>{
@@ -610,13 +619,6 @@ function createElement(type, props = {}, children = []) {
         element.appendChild(child);
     });
     return element;
-}
-function DisplayAnimation() {
-    const animation = createElement("img", {
-        src: "https://media.tenor.com/LEY96aL4a4MAAAAC/cars.gif",
-        alt: "animation"
-    });
-    return document.querySelector(".animation").appendChild(animation);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -665,7 +667,7 @@ async function getImages(int, type, orientation) {
     } else console.log("Something went wrong...");
 }
 const displayNav = (data)=>{
-    let logoPath = "https://ik.imagekit.io/tfotr241290/Black_n_White_Luxury__Rent_Car_Logo.png?updatedAt=1679597309897";
+    let logoPath = "https://ik.imagekit.io/tfotr241290/logo_white.png?updatedAt=1679940372001";
     const navImages = `<img name=slider class="navimages">`;
     const slideImages = [];
     slideImages[0] = data.results[3].urls.regular;
@@ -673,7 +675,7 @@ const displayNav = (data)=>{
     slideImages[2] = data.results[11].urls.regular;
     slideImages[3] = data.results[15].urls.regular;
     slideImages[4] = data.results[17].urls.regular;
-    const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/1051/1051309.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/25/25347.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt"facebooklogo"></a></section>`;
+    const socialMedia = `<section class="logo"><img class="nav-img" src=${logoPath} alt="navimgcar"></section><section class="media"><a href="https://www.facebook.com"><img class="face" src="https://cdn-icons-png.flaticon.com/128/3670/3670124.png" alt"facebooklogo"></a> <a href="https://www.twitter.com"><img class="twitter" src="https://cdn-icons-png.flaticon.com/128/3670/3670211.png" alt"facebooklogo"></a> <a href="https://www.instagram.com"><img class="insta" src="https://cdn-icons-png.flaticon.com/128/3670/3670125.png" alt"facebooklogo"></a></section>`;
     let indexOfImages = 0;
     function changeImages() {
         document.slider.src = slideImages[indexOfImages];
@@ -685,6 +687,6 @@ const displayNav = (data)=>{
     document.querySelector(".heading").innerHTML = socialMedia;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["jC2qd","8lqZg"], "8lqZg", "parcelRequiredc04")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hnNSs","8lqZg"], "8lqZg", "parcelRequiredc04")
 
 //# sourceMappingURL=index.975ef6c8.js.map
