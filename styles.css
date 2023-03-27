@@ -8,9 +8,9 @@
 --font-headline: 'Bebas Neue', cursive;
 /* colors */
 --primary-color: #023047;
---secondary-color: #E78200;
+--secondary-color: #FFC94C;
 --tertiary-color: #E4C79F;
---light-grey: #7E7E7E;
+--light-grey: #f1f1f1;
 --dark-grey: #3A3A3A;
 }
 
@@ -20,7 +20,7 @@ body{
     font-family: var(--font-body);
 }
 
-#cuadrado {
+#car-animation {
     width: fit-content;
     animation-name: mianimation;
     animation-duration: 4s;
@@ -30,16 +30,16 @@ body{
     margin-top: 5rem;
     margin-bottom: 0;
 }
-#cuadrado img{
+#car-animation img{
     width: auto;
     height: 150px;
 }
 
   
 @keyframes mianimation {
-    0% { left:0px; top:0px;}
+    0% { left:0%; top:0px;}
     50% {left:300px; top:0px;}
-    100% {left:70%; top:0px;}
+    100% {left:65%; top:0px;}
 }
 
 .face{
@@ -84,7 +84,7 @@ body{
     grid-template-columns: 2(1fr);
     grid-template-rows: auto;
     text-align: center;
-    background-color: var(--tertiary-color);
+    background-color: var(--light-grey);
     padding: 2rem;
     font-family: var(--font-body);
 }
@@ -127,7 +127,7 @@ form {
   
   .container {
     padding: 20px;
-    background-color: var(--tertiary-color);
+    background-color: var(--light-grey);
     font-family: var(--font-body);
     font-size: 17px;
   }
@@ -230,13 +230,13 @@ footer{
     
     }
 
-    #cuadrado img{
+    #car-animation img{
         height: 90px;
     }
     @keyframes mianimation {
         0% { left:0px; top:0px;}
         50% {left:200px; top:0px;}
-        100% {left:10%; top:0px;}
+        100% {left:100%; top:0px;}
     }
 
     footer{
