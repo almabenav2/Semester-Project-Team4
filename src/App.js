@@ -13,14 +13,6 @@ export function App2(){
     return createElement('div',{},[slogan]);
 }
 
-export function App3(){
-
-    const name = document.querySelector("#name").value;
-    const feedback = createElement('h2',{className:"feedback", textContent:`Thank you ${name} for subscribing to our newsletter, you will be emailed with our newest offers and promotions as soon as they come out.`});
-    return createElement('div',{},[feedback]);
-}
-
-
 
 
 export default App; 

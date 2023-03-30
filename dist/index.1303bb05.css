@@ -1,18 +1,21 @@
 @import "https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Josefin+Sans&family=Kaushan+Script&display=swap";
 :root {
+  --font-body: "Josefin Sans", sans-serif;
+  --font-headline: "Bebas Neue", cursive;
   --primary-color: #023047;
-  --secondary-color: #e78200;
+  --secondary-color: #ffc94c;
   --tertiary-color: #e4c79f;
-  --light-grey: #7e7e7e;
+  --light-grey: #f1f1f1;
   --dark-grey: #3a3a3a;
 }
 
 body {
   max-width: 960px;
+  font-family: var(--font-body);
   margin: 0 auto;
 }
 
-#cuadrado {
+#car-animation {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 5rem;
@@ -24,7 +27,7 @@ body {
   position: relative;
 }
 
-#cuadrado img {
+#car-animation img {
   width: auto;
   height: 150px;
 }
@@ -32,7 +35,7 @@ body {
 @keyframes mianimation {
   0% {
     top: 0;
-    left: 0;
+    left: 0%;
   }
 
   50% {
@@ -42,7 +45,7 @@ body {
 
   100% {
     top: 0;
-    left: 70%;
+    left: 65%;
   }
 }
 
@@ -81,17 +84,17 @@ body {
 .grid {
   grid-template-columns: 2(1fr);
   text-align: center;
-  background-color: var(--tertiary-color);
+  background-color: var(--light-grey);
+  font-family: var(--font-body);
   grid-template-rows: auto;
   margin: 2rem;
   padding: 2rem;
-  font-family: Josefin Sans, sans-serif;
   display: grid;
 }
 
 .grid input[type="date"] {
+  font-family: var(--font-body);
   padding: .5rem;
-  font-family: Josefin Sans, sans-serif;
   font-size: 1.3rem;
 }
 
@@ -118,30 +121,31 @@ body {
 }
 
 .submission input {
-  font-family: Josefin Sans, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.2rem;
 }
 
 form {
+  font-family: var(--font-body);
   border: 3px solid #f1f1f1;
   margin: 2rem;
-  font-family: Arial;
 }
 
 .container {
-  background-color: var(--tertiary-color);
+  background-color: var(--light-grey);
+  font-family: var(--font-body);
   padding: 20px;
-  font-family: Josefin Sans, sans-serif;
   font-size: 17px;
 }
 
 input[type="text"], input[type="submit"] {
   width: 100%;
   box-sizing: border-box;
+  font-family: var(--font-body);
+  cursor: pointer;
   border: 1px solid #ccc;
   margin: 8px 0;
   padding: 12px;
-  font-family: Josefin Sans, sans-serif;
   display: inline-block;
   box-shadow: 2px 5px 5px #888;
 }
@@ -163,13 +167,13 @@ input[type="submit"]:hover {
 
 .slogan {
   text-align: center;
-  background-image: url("https://images.unsplash.com/photo-1494783367193-149034c05e8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  font-family: var(--font-headline);
+  background-image: url("https://images.unsplash.com/photo-1563242152-568e5de6f2b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 2rem 6rem;
   padding: 1rem;
-  font-family: Bebas Neue, cursive;
   font-size: 1.8rem;
 }
 
@@ -226,7 +230,7 @@ footer {
     margin: 0;
   }
 
-  #cuadrado img {
+  #car-animation img {
     height: 90px;
   }
 
@@ -243,7 +247,7 @@ footer {
 
     100% {
       top: 0;
-      left: 10%;
+      left: 100%;
     }
   }
 

@@ -564,13 +564,11 @@ var _dataJs = require("./data.js");
 document.getElementById("root").appendChild((0, _appJsDefault.default)());
 document.querySelector(".slogan").appendChild((0, _appJs.App2)());
 (0, _dataJs.getImages)(1, "car", "landscape");
-document.querySelector(".subscribed").appendChild((0, _appJs.App3)());
 
 },{"./App.js":"2kQhy","./data.js":"9kapS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App2", ()=>App2);
-parcelHelpers.export(exports, "App3", ()=>App3);
 var _utilsJs = require("./utils.js");
 function App() {
     const header = (0, _utilsJs.createElement)("header", {
@@ -591,16 +589,6 @@ function App2() {
     });
     return (0, _utilsJs.createElement)("div", {}, [
         slogan
-    ]);
-}
-function App3() {
-    const name = document.querySelector("#name").value;
-    const feedback = (0, _utilsJs.createElement)("h2", {
-        className: "feedback",
-        textContent: `Thank you ${name} for subscribing to our newsletter, you will be emailed with our newest offers and promotions as soon as they come out.`
-    });
-    return (0, _utilsJs.createElement)("div", {}, [
-        feedback
     ]);
 }
 exports.default = App;
@@ -667,7 +655,7 @@ async function getImages(int, type, orientation) {
     } else console.log("Something went wrong...");
 }
 const displayNav = (data)=>{
-    let logoPath = "https://ik.imagekit.io/tfotr241290/logo_white.png?updatedAt=1679940372001";
+    let logoPath = "https://ik.imagekit.io/tfotr241290/Black_n_White_Luxury__Rent_Car_Logo.png?updatedAt=1679597309897";
     const navImages = `<img name=slider class="navimages">`;
     const slideImages = [];
     slideImages[0] = data.results[3].urls.regular;
